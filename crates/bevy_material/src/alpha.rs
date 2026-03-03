@@ -18,6 +18,9 @@ pub enum AlphaMode {
     /// considers the color to be fully transparent (alpha is set to 0.0).
     /// If it is equal to or above the threshold,
     /// considers the color to be fully opaque (alpha is set to 1.0).
+    ///
+    /// When [`StandardMaterial::unlit`](bevy_pbr::StandardMaterial::unlit)
+    /// is `true`, the threshold value is ignored and a default of 0.5 is used.
     Mask(f32),
     /// The base color alpha value defines the opacity of the color.
     /// Standard alpha-blending is used to blend the fragment's color
